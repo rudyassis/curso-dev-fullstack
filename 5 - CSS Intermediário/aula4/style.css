@@ -1,0 +1,16 @@
+
+
+body {
+    background: url(whiteback.jpg);
+}
+
+ul {
+    background: grey;
+    padding: 20px;
+    opacity: 0.6;
+}
+
+ul li {
+    display: inline;
+    margin: 20px;
+}
