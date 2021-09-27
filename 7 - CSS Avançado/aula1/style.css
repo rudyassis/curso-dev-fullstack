@@ -1,0 +1,16 @@
+:root {
+    --color-primary: rgb(10, 218, 10);
+}
+
+h1 {
+    color: var(--color-primary);
+}
+
+p {
+    color: var(--color-primary);
+}
+
+button {
+    background: var(--color-primary);
+    color: white;
+}
