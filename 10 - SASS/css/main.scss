@@ -1,0 +1,70 @@
+
+@import 'base';
+@import 'variables';
+@import 'mixins';
+@import 'extends';
+
+
+.container {
+    display: flex;
+    justify-content: space-around;
+
+    .box {
+        width: 30%;
+        color: black;
+        background-color: orange;
+        border-radius: 8px;
+        padding: 20px;
+
+        &.active {
+            background-color: $color-secundary;
+        }
+
+        h2 {
+            font-style: $font-secundary;
+            font-size: 22px;
+            margin: 10px 20px 30px 20px;
+        }
+
+        p {
+            font-style: $font-primary;
+            font-size: 18px;
+
+            &.hidden {
+                display: none;
+            }
+        }
+
+        ul {
+            @include reset-list(100px, 10px, square);
+        }
+
+        a {
+            color: green;
+
+            &:hover {
+                color: black;
+
+                & + p.hidden {
+                    display: block;
+                }
+            }
+        }
+
+        .success {
+            @extend %box-alert;
+            @include bg-effect(success);
+        }
+
+        .warning {
+            @extend %box-alert;
+            @include bg-effect(warning);
+            
+        }
+
+        .danger {
+            @extend %box-alert;
+            @include bg-effect(danger);
+        }
+    }
+}
